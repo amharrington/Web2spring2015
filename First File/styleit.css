@@ -54,7 +54,15 @@ h1 { font-size:30px; font-family:helvetica; color:black; text-align:center; padd
 h2 { font-size:20px; font-family:helvetica; color:black; text-align:center; padding-top:10px; padding-bottom:10px; }
 .mail, .link { display:inline; font-family:helvetica; color:black; text-align:center; }
 
-.left { float:left; }
-.right { float:right; }
+.left { float:left; padding-left:32%; }
+.right { float:right; padding-right:32%; }
+
+span { color:blue; }
+
+a { text-decoration:none; }
+
+
+
+
  
 p {text-align:center;}
