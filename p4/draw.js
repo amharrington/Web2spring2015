@@ -1,20 +1,21 @@
-function addImage(name,image,likes) {
+
+function addImage(name,likes,image) {
  var $container = $("div.container");
  var $div = $("<div>").addClass("person");
  var $name = $("<h1>").text(name);
- var $image = $("<img>").attr("src",image);
  var $likes = $("<h3>").text(likes);
+ var $image = $("<img>").attr("src",image);
  
-$div.append($name).append($image).append($likes);
+$div.append($name).append($likes).append($image);
 
 $container.append($div);
 }
 
 
-addImage("Amy Smith","720", "http://lorempixel.com/200/200/people/4/");
+addImage("Bob Johnson","720", "http://lorempixel.com/200/200/people/2/");
 addImage("Frank Scott","432", "http://lorempixel.com/200/200/people/3/");
 addImage("Amy Smith","543", "http://lorempixel.com/200/200/people/4/");
-addImage("Amy Smith","334", "http://lorempixel.com/200/200/people/4/");
+addImage("Amy Smith","344", "http://lorempixel.com/200/200/people/4/");
 
 function addImage(name,likes,image) {
  var $container = $("div.container");
