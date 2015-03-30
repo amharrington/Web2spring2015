@@ -1,0 +1,23 @@
+h4{
+  color:pink;
+}
+h5{
+  color:blue;
+}
+
+div{
+  list-style:none;
+}
+.person{
+  float:left;
+  padding:2%;
+  margin:10px;
+  width:200px;
+  height:200px;
+  background-color:black;
+}
+
+img {
+	width:100px;
+	height:100px;
+}
