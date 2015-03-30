@@ -1,18 +1,14 @@
 h1{
 text-align:center;
-  color:saddlebrown;
+  color:black;
 }
 h3{
 text-align:center;
-  color:limegreen;
+  color:black;
 }
 
 div{
   list-style:none;
-}
-
-.container{
-	text-align:center;
 }
 
 .person{
@@ -20,5 +16,5 @@ div{
   padding:20px;
   margin:30px;
   max-width:600px;
-  background-color:black;
+  background-color:lightgray;
 }
