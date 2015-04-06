@@ -101,23 +101,23 @@ img:last-of-type {
 }
 
 #title {
-  background-image: url("http://lorempixel.com/output/abstract-q-c-640-480-6.jpg");
+  background-image: url("http://upload.wikimedia.org/wikipedia/commons/5/50/Seattle_Space_Needle.jpg");
    background-attachment: fixed;  
 }
 
 #slide1:before {
-  background-image: url("http://lorempixel.com/output/abstract-q-c-640-480-4.jpg");
+  background-image: url("http://www.spaceneedle.com/home/socialshare.jpg");
   transform: translateZ(-1px) scale(2);
   z-index:-1;
 }
 
 #slide2 {
-  background-image: url("http://lorempixel.com/output/abstract-q-c-640-480-3.jpg");
+  background-image: url("https://s-media-cache-ak0.pinimg.com/originals/37/27/cb/3727cb35dc496a5bc37d0b28e0203606.jpg");
   background-attachment: fixed;
 }
 
 #slide3:before {
-  background-image: url("http://lorempixel.com/output/abstract-q-c-640-480-5.jpg");
+  background-image: url("http://www.jetsetenterprises.com/cruise/images/Pacific%20Escape/IMG_3397-Sea-SpaceNeedleFront.JPG");
   transform: translateZ(-1px) scale(2);
   z-index:-1;
 }
