@@ -1,0 +1,39 @@
+  * {
+  margin: 0;
+  padding: 0;
+}
+
+body { font-family: helvetica; font-size:16px; }
+
+.page {
+  position:relative;
+  overflow:hidden;
+  height: 100vh;
+}
+
+.full-page1{
+  background-color:lightyellow;
+}
+
+.full-page2{
+  background-color:seagreen;
+}
+
+.full-page {
+ height: 100vh;
+}
+
+h1{
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform: translate(-50%, -50%);
+  transition:font-size 2s ease;
+  opacity: 0;
+  transition: opacity 2s ease;
+}
+
+h1.on-page{
+  opacity:1;
+  font-size: 50px;
+}
