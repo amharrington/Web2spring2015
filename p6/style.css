@@ -105,7 +105,7 @@ img:last-of-type {
 .header {
   text-align: center;
   font-size: 175%;
-  color: #fff;
+  color:black;
   text-shadow: 0 2px 2px #000;
 }
 
@@ -132,5 +132,5 @@ img:last-of-type {
 }
 
 #slide4 {
-  background: blue;
+  background-color:gray;
 }
