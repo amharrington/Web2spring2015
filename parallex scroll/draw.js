@@ -1,20 +1,18 @@
 
 
 
-$(window).scroll(function(){
+$(window).scroll(function(e){
     if ($(window).scrollTop() >= 300) {
-       $('nav').addClass('fixed-header');
+       $('h1 span').addClass('fixed-header');
     }
     else {
-       $('nav').removeClass('fixed-header');
+       $('h1 span').removeClass('fixed-header');
     }
 });
 
-/*video insert*/
-
 $(".scrolling").scrollFlight();
 
-$("h1").on("arrived",function(e) {
+$("h1 span").on("arrived",function(e) {
   $(this).addClass("on-page");
 });
 
@@ -22,4 +20,6 @@ $("h1").on("arrived",function(e) {
 $(".iframe-cover").on("arriving",function(e) {
   $(this).addClass("appeared");
 });
+
+
 
