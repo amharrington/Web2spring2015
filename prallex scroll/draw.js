@@ -1,9 +1,5 @@
-/*$(".scrolling").scrollFlight();
 
-$("h1").on("arrived",function(e) {
-  $(this).addClass("on-page");
-});
-*/
+
 
 $(window).scroll(function(){
     if ($(window).scrollTop() >= 300) {
