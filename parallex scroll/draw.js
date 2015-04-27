@@ -1,8 +1,8 @@
 
 
 
-$(window).scroll(function(e){
-    if ($(window).scrollTop() >= 300) {
+$(".masthead").scroll(function(){
+    if ($("masthead").scrollTop() >= 300) {
        $('h1 span').addClass('fixed-header');
     }
     else {
