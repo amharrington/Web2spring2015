@@ -1,7 +1,11 @@
 
 /* Add Styles Here */
 
-
+.clearfix:after{
+	content:"";
+	display: block;
+	clear: both;
+}
 
 #container{
 	width: 400px;
@@ -9,7 +13,7 @@
 	position:relative;
 	top:100px;
 	left:550px;
-	border:2px solid red;
+	border:2px solid white;
 }
 
 #head {
@@ -32,6 +36,7 @@
 		position:absolute;
 		top:25px;
 		left:25px;
+		transition: 2s ease;
 }
 
 #eyeright{
@@ -44,7 +49,14 @@
 		position:absolute;
 		top:25px;
 		left:125px;
+		transition: 2s ease;
 		
+}
+
+#head .eye:hover{
+	background:red;
+	transform: rotateX(90deg);
+	transition: 2s ease;
 }
 
 #bodyblack{
@@ -52,8 +64,10 @@
 	height: 200px;
 	background: gray;
 	border-radius: 25px;
-	position:absolute;
-	margin-left:60px;
+	margin-left: 10px;
+	/*position:absolute;
+	margin-left:60px;*/
+	float: left;
 }
 
 #bodywhite{
@@ -61,20 +75,89 @@
 	height: 150px;
 	background: white;
 	border-radius: 25px;
-	position:relative;
+	position: relative;
+	z-index: 10000;
 	top:25px;
-	left:20px;
-
+	left:30px;
+	transition: 2s ease;
 }
-
+#heart{
+    position: relative;
+    width: 100px;
+    height: 90px;
+    bottom: 90px;
+    left: 70px;
+	z-index: 100;
+	
+}
+#bodywhite:hover{
+	background:rgba(255,255,255,0);
+	transition: 2s ease;
+}
+#heart:before,
+#heart:after {
+    position: absolute;	
+    content: "";
+    left: 50px;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    background: red;
+    -moz-border-radius: 50px 50px 0 0;
+    border-radius: 50px 50px 0 0;
+    -webkit-transform: rotate(-45deg);
+       -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+         -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    -webkit-transform-origin: 0 100%;
+       -moz-transform-origin: 0 100%;
+        -ms-transform-origin: 0 100%;
+         -o-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+}
+#heart:after {
+    left: 0;
+    -webkit-transform: rotate(45deg);
+       -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+         -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transform-origin: 100% 100%;
+       -moz-transform-origin: 100% 100%;
+        -ms-transform-origin: 100% 100%;
+         -o-transform-origin: 100% 100%;
+            transform-origin :100% 100%;
+}
+#heart:hover{
+	width:0px;
+	height:160px;
+	transition:width 2s ease, height 2s ease;
+	transform: scale(2,2);
+}
 #leftarm{
 	width:50px;
 	height:200px;
 	background:gray;
 	border-radius:25px;
 	margin-top:0px;
-	margin-right:50px;
-	position:absolute;
+	margin-left: 10px;
+	/*margin-right:50px;*/
+	/*position:absolute;*/
+	float: left;
+	transition:5s ease;
+}
+
+#leftarm:hover{
+	transform:rotate(200deg);
+	transform-origin:top;
+	transition:5s ease;
+}
+
+#rightarm:hover{
+	transform:rotate(200deg);
+	transform-origin:top;
+	transition:5s ease;
 }
 	
 #rightarm{
@@ -83,8 +166,10 @@
 	background:gray;
 	border-radius:25px;
 	margin-top:0px;
-	margin-left:320px;
-	position:absolute;
+	/*margin-left:320px;*/
+/*	position:absolute;*/
+	float: left;
+	transition:5s ease;
 }	
 	
 	
@@ -104,6 +189,7 @@
 	margin-top:215px;
 	margin-left:100px;
 	position:absolute;
+	transition:5s ease;
 }
 
 #legright{
@@ -114,8 +200,21 @@
 	margin-top:215px;
 	margin-left:200px;
 	position:absolute;
+	transition:5s ease;
 }
 
+#legleft:hover{
+	transform:rotate(200deg);
+	transform-origin:top;
+	transition:5s ease;
+}
+
+#legright:hover{
+	transform:rotate(200deg);
+	transform-origin:top;
+	background-color: black;
+	transition:5s ease;
+}
 
 
 	

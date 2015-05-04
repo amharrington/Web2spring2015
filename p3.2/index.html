@@ -3,7 +3,7 @@
 <head>
 	<style type="text/css">
 	body{
-		background-color: orange;
+		background-color: black;
 	}
 	</style>
 	<meta charset="UTF-8">
@@ -19,28 +19,29 @@
 	    speed(0);
 
 	    lineWidth(1)
-	  	function flower(size){
-	  		lineColor("blue");
+	  	function boxes(size){
+	  		lineColor("green");
 			forward(size);
-			rotate(120);
+			rotate(90);
 			forward(size);
-			rotate(120);
+			rotate(90);
 			forward(size+size);
-			rotate(120);
+			rotate(90);
 			forward(size);
-			rotate(120);
+			rotate(90);
 			forward(size+size);
-			rotate(120);
+			rotate(90);
 			forward(size);
-			rotate(120);
+			rotate(90);
 			forward(size);
 		}
 
 		for(var y = 0; y < 40; y++){
 			for(var x = 0; x < 40; x++){
-				flower(100);
-				moveTo(x*70,y*70);
-				lineColor("blue");
+				boxes(100);
+				moveTo(x*40,y*70);
+				angle(45)
+				lineColor("green");
 			}
 		};
 	  </script>

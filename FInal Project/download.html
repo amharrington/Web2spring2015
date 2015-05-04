@@ -64,9 +64,9 @@ function hideModal() {
 // This function is the one that hides the modal and the over lay after you have clicked off of it
 
 function addItem(item) {
-  var $li = $("<div>").addClass("item").addClass(item.State);
+  var $li = $("<div>").addClass("item").addClass(item.Color);
 
-  $li.attr("data-category",item.State);
+  $li.attr("data-category",item.Color);
 
   var $h2 = $("<h2 class='name'>").text(item.Mountain);
   var $p = $("<p class='description'>").text(item.Difficulty);

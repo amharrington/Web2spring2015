@@ -1,20 +1,28 @@
 h1{
-text-align:center;
+width:200px;
   color:black;
+  font-size: 14px;
+  word-wrap:break-word;
+  font-weight:normal;
+
 }
 h3{
 text-align:center;
   color:black;
+  font-size:12px;
 }
 
 div{
+min-height: 200px;
   list-style:none;
 }
-
+img{
+	margin-left:20px;
+}
 .person{
   float:left;
-  padding:20px;
-  margin:30px;
+  padding:30px;
+  margin:10px;
   max-width:600px;
   background-color:lightgray;
 }

@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<style type="text/css">
+	body{
+		background-color: MistyRose;
+	}
+	</style>
+	<meta charset="UTF-8">
+	<title>Pattern3</title>
+	<link rel="stylesheet" href="styleit.css" type="text/css" media="screen">
+	<script src='http://cykod.github.io/Logoish/logoish.js'></script>
+</head>
+
+	<body>
+	 <script>
+	    Logoish.init();
+
+	    speed(0);
+
+	    lineWidth(5)
+	  	function spiral(size){
+	  		lineColor("MidnightBlue");
+			
+			  
+			  rotate(-20);
+			  forward(size);
+			  rotate(-50);
+			  forward(size);
+			 
+		}
+		function spiral2(size){
+			lineColor("PaleGreen");
+
+			rotate(40);
+			  forward(size);
+			  rotate(80);
+			  forward(size);
+
+
+		}
+		for(var x = 0; x < 1200; x++){
+			spiral(x/3);
+			spiral2(x/3);
+		};
+
+		
+	  </script>
+	  <script src='draw.js'></script>
+	</body>
+	
+</html>
