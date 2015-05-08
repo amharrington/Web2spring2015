@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Collection Example</title>
+  <title>CanClimb Data Display</title>
   <script src='https://code.jquery.com/jquery-2.1.3.min.js'></script>
   <script src='http://cykod.github.io/Collection.js/packery.pkgd.min.js'></script>
   <script src='http://cykod.github.io/Collection.js/tabletop.js'></script>
@@ -10,13 +10,21 @@
   <link type='text/css' rel='stylesheet' href='style.css' />
 </head>
 <body>
+<!-- <img src="img/BG.jpg" alt="background">
+ -->
 
 <div id='filter-bar-wrapper'>
   <div id='filter-bar'>
     <input type='text' id='search' placeholder='search'/>
     <button data-category=""      class='category selected' id="all-button">All</button>
-    <button data-category="blue"  class='category'>Blue</button>
-    <button data-category="red"   class='category'>Red</button>
+    <button data-category="MA"  class='category'>MA</button>
+    <button data-category="ME"   class='category'>ME</button>
+    <button data-category="NH"  class='category'>NH</button>
+    <button data-category="VT"   class='category'>VT</button>
+    <button data-category="Very Difficulty"  class='category'>Very Difficult</button>
+    <button data-category="Difficult"   class='category'>Difficult</button>
+    <button data-category="Moderate"  class='category'>Moderate</button>
+    <button data-category="Basic"   class='category'>Easy</button>
   </div>
 </div>
 

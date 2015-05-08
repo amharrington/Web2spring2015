@@ -1,0 +1,216 @@
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0; 
+}
+html, body, h1 {
+  font-size: 100%;
+  width: 100%;
+  height:100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; 
+}
+body {
+  -webkit-overflow-scrolling: touch;
+  overflow-y: auto;
+  font-size: 120%;
+  line-height: 1.625;
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-perspective: 1px;
+  -moz-perspective: 1px;
+  -ms-perspective: 1px;
+  -o-perspective: 1px;
+  perspective: 1px;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d; 
+}
+p {
+  margin-bottom: 1em; 
+}
+hr {
+  margin: 4em 0; 
+}
+
+h5 {
+  font-style:uppercase;
+  font-family:helvetica;
+}
+.page {
+  padding: 20px 20%;
+  position: relative;
+  top: 70%;
+  background-color: white; 
+}
+
+.container{
+  width:100%;
+  height:500px;
+  position:relative;
+}
+.theh1{
+  position:absolute;
+  top:5px;
+  left:700px;
+}
+/*fixed header css here*/
+
+.fixed-header {
+  position: fixed;
+  top:500; left:300;
+  width: 100%; 
+}
+
+/*fixed header css ends here*/
+
+.img{
+  width:1429px;
+  height:500px;
+}
+.masthead {
+  position: absolute;  
+  top: -70%;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  padding-top: 20%;
+  background: url(image) no-repeat 50% 50%;
+  background-size: cover;
+  -webkit-transform: translateZ(-0.9px) scale(1.9);
+  -moz-transform: translateZ(-0.9px) scale(1.9);
+  -ms-transform: translateZ(-0.9px) scale(1.9);
+  -o-transform: translateZ(-0.9px) scale(1.9);
+  transform: translateZ(-0.9px) scale(1.9);
+  z-index: -1;
+  text-align: center; 
+}
+h1, h4, .logo {
+  font: 35px/150% 'Oswald';
+}
+h1 span {
+  height:0%;
+  color:white;
+  padding: .3em;
+  transform: translate(-50%, -50%);
+  transition:font-size 2s ease;
+  opacity: 0;
+  transition: opacity 2s ease;
+}
+h1 {
+  font-size:80px;
+  
+}
+
+h1 span.on-page{
+  opacity:1;
+  font-size: 50px;
+}
+
+h4 {
+  padding-bottom: .7em;
+}
+.logo {
+  background-color:lightgray;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  max-width: 100%;
+  height: 60px;
+  top: 0px;
+  border-bottom: solid 1px #DDD;
+  padding: 0 10px;
+
+}
+
+ a:link,
+ a:visited,
+ a:active {
+  color: white;
+}
+
+.footer{
+  background-color:green
+}
+
+/* video stuff yeaaaa*/
+.movie{
+width:100%;
+height:100%;
+}
+  .iframe-wrapper {
+  background-color:black; 
+  width:100%;
+  overflow:hidden;
+  position:absolute;;
+  height: 100vh;
+  top:0;
+  left:0;
+}
+
+.iframe-wrapper iframe {
+  position: absolute;
+  top:-10%;
+  left:-20%;
+  width:140%;
+  height:120%;
+}
+
+.iframe-cover {
+  position:relative;;
+  left:0px;
+  top:0px;
+  max-width:100%;
+  height:100vh;
+  background-color:rgba(255,255,255,0);
+  transition: background-color 1s ease 1s;
+  z-index:2;
+}
+
+.iframe-cover.appeared {
+  background-color:rgba(255,255,255,0.0);
+}
+.footer{
+  width:100%;
+  height:30px;
+  background-color:black;
+  background-attachment: 
+}
+/*
+scrolling*/
+
+
+/* added shit
+.menu {
+    width: 80%;
+    height: 5em;
+    margin-top: 1em;
+    left: 50%;
+    margin-left: -40%;
+    position: fixed;
+    background: orange;
+    z-index: 10;
+}
+.image {
+    padding-top: 500px;
+    background-image: url('http://tedxbeaconstreet.com/wp-content/uploads/2012/10/hero-speakers1.jpg');
+    background-color: red;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 1;
+    top: 0px;
+    -webkit-background-size: cover;
+}
+
+.container-below {
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    height: 600px;
+    background-color: darkblue;
+
+    */
+

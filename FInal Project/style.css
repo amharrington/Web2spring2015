@@ -1,0 +1,73 @@
+body, html { margin:0px; padding:0px; }
+
+
+#container1 {
+  height:100vh;
+  position:relative;
+  background-color:rgba(255,0,0,0.1);
+}
+
+#widget1 {
+  font-size:30px;
+  opacity: 0;
+  transition: opacity 5s ease;
+}
+
+#widget1.arrived {
+  opacity: 1;
+}
+
+
+#container2 {
+  height:100vh;
+  position:relative;
+  background-color:blue;
+  background-color:rgba(0,0,255,0.1);
+}
+
+#container2.arriving {
+  background-color:rgba(0,0,255,0.5);
+}
+
+
+#container2.arrived{
+  background-color:rgba(0,0,255,1);
+}
+
+#container3 {
+  height:100vh;
+  position:relative;
+  background-color:purple;
+  opacity: 0.1;
+}
+
+
+#container4 {
+  height:100vh;
+  position:relative;
+  background-color:purple;
+  opacity: 0.1;
+}
+
+#widget1, #widget2 {
+  color:white;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  color:black;
+}
+
+#widget2 {
+  transform: translate(-50%,0);
+  left:-200%;
+  transition: left 2s ease, transform 0.25s linear;
+}
+
+#widget2.arrived {
+  left:50%;
+}
+
+#widget3 {
+
+}
