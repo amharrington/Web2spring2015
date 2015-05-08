@@ -10,27 +10,25 @@
   <link type='text/css' rel='stylesheet' href='style.css' />
 </head>
 <body>
-<img src="img/BG" alt="background">
-
-
+<!-- <img src="img/BG.jpg" alt="background">
+ -->
 <nav>
-	<div id='filter-bar-wrapper'>
-	  <div id='filter-bar'>
-	    <input type='text' id='search' placeholder='search'/>
-		<div id="center-buttons">
-		    <button data-category=""      class='category selected' id="all-button">All</button>
-		    <button data-category="MA"  class='category'>MA</button>
-		    <button data-category="ME"   class='category'>ME</button>
-		    <button data-category="NH"  class='category'>NH</button>
-		    <button data-category="VT"   class='category'>VT</button>
-		    <button data-category="Very Difficulty"  class='category'>Very Difficult</button>
-		    <button data-category="Difficult"   class='category'>Difficult</button>
-		    <button data-category="Moderate"  class='category'>Moderate</button>
-		    <button data-category="Basic"   class='category'>Easy</button>
-		   </div>
-	  </div>
-	</div>
-</nav>
+  <div id='filter-bar-wrapper'>
+    <div id='filter-bar'>
+      <input type='text' id='search' placeholder='search'/>
+        <div id="center-buttons">
+          <button data-category=""  data-type=""    class='category type selected' id="all-button">All</button>
+          <button data-type="MA"  class='type'>MA</button>
+          <button data-type="ME"   class='type'>ME</button>
+          <button data-type="NH"  class='type'>NH</button>
+          <button data-type="VT"   class='type'>VT</button>
+          <button data-category="Difficult"   class='category'>Difficult</button>
+          <button data-category="Moderate"  class='category'>Moderate</button>
+          <button data-category="Easy"   class='category'>Basic</button>
+        </div>
+    </div>
+  </div>
+  </nav>
 
 <ul class='collection'>
  
@@ -40,21 +38,28 @@
 
 <div class='overlay'></div>
 <div class='modal'></div>
+
 <script>
 
 // This part is creating the modal and the overlay
 
-function showModal(item) {
-   $(".modal").empty();
+  function hideModal() {
+    $(".overlay").hide();
+    $(".modal").hide();
+  };
 
+  function showModal(item) {
+  
+   $(".modal").empty();
    // so right now this modal is empty 
    
    var $h1 = $("<h1>").text(item.Mountain);
-   var $img = $("<img>").attr("src",item.Image);
-   var $p = $("<p class='description'>").text(item.Difficulty);
+   var $img = $("<img>").attr("src",item.img);
+   var $dp = $("<p class='description'>").text(item.Difficulty);
+   var $sp = $("<p class='state'>").text(item.State);
 
 // fill these in with the data from my spreadsheet
-   $(".modal").append($h1,$img,$p);
+   $(".modal").append($h1,$img,$sp,$dp);
 
    /* so when the modal pops up it will display the h1, the img, and the p that is being added by this .append
    (header 1, image and the description) 
@@ -66,26 +71,27 @@ function showModal(item) {
 
    //both the modal and the overlay are showing
 
-}
+};
 
-function hideModal() {
-  $(".overlay").hide();
-  $(".modal").hide();
-}
 
 // This function is the one that hides the modal and the over lay after you have clicked off of it
 
+
+
+
 function addItem(item) {
   var $li = $("<div>").addClass("item").addClass(item.State);
-
-  $li.attr("data-category",item.State);
-
   var $h2 = $("<h2 class='name'>").text(item.Mountain);
-  var $p = $("<p class='description'>").text(item.Difficulty);
+  var $img = $("<img>").attr("src",item.img);
+  var $dp = $("<p class='description'>").text(item.Difficulty);
+  var $sp = $("<p class='state'>").text(item.State);
 
-  $li.append($h2).append($p);
+  $li.attr("data-type",item.State); 
+  $li.attr("data-category",item.Difficulty);
 
-  $li.on("click",function(e) {
+  $li.append($h2).append($img).append($dp).append($sp);
+
+  $li.on("click",function(e){
       showModal(item);
   });
 
@@ -116,7 +122,8 @@ function callback(data) {
   var myCollection = $(".item").collection({
     filters: { 
       "title": "h2",
-      "category": "[data-category]"
+      "category": "[data-category]", 
+      "type": "[data-type]"
     },
 
     update: function() { 
@@ -133,6 +140,13 @@ function callback(data) {
       $(this).addClass("selected");
       myCollection.filtered("category",category);
   });
+
+  $(".type").on("click",function(e) {
+      var type = $(this).data("type");
+      $("#filter-bar button").removeClass("selected");
+      $(this).addClass("selected");
+      myCollection.filtered("type",type);
+  });
 // this selects the filtering part in the filter bar
 
   $("#search").on("change keyup",function(e) {
@@ -141,6 +155,9 @@ function callback(data) {
 
   $(".overlay").on("click",function(e) {
       hideModal();
+  });
+   $("h2").on("click",function(e) {
+      showModal();
   });
 // when you click on the voerlay the modal will be gone?
 }
