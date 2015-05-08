@@ -1,8 +1,10 @@
-
-
+$("header").css({
+	"position": "fixed", 
+	"width":"100%"
+});
 
 $(".masthead").scroll(function(){
-    if ($("masthead").scrollTop() >= 300) {
+    if ($(".masthead").scrollTop() >= 300) {
        $('h1 span').addClass('fixed-header');
     }
     else {
@@ -20,6 +22,3 @@ $("h1 span").on("arrived",function(e) {
 $(".iframe-cover").on("arriving",function(e) {
   $(this).addClass("appeared");
 });
-
-
-
